@@ -242,6 +242,48 @@ button{cursor:pointer;border:none;outline:none;font-family:inherit}
 .result-status.fail{color:var(--orange)}
 .result-status.error{color:var(--red)}
 .result-tip{font-size:.75rem;color:var(--gray-text);margin-top:2px}
+/* ===== SURVEY SCREEN ===== */
+#screen-survey{background:linear-gradient(160deg,#1a3a5c 0%,#2e6da4 100%);min-height:100vh;padding:20px 16px 40px;overflow-y:auto}
+.survey-header{text-align:center;padding:20px 0 16px}
+.survey-header h2{color:#fff;font-size:1.3rem;font-weight:700;margin-bottom:6px}
+.survey-header p{color:#93c5fd;font-size:.82rem}
+.survey-progress{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:18px}
+.survey-progress-bar{flex:1;max-width:200px;height:6px;background:rgba(255,255,255,.25);border-radius:3px}
+.survey-progress-fill{height:100%;background:#60a5fa;border-radius:3px;transition:width .4s}
+.survey-progress-text{color:#93c5fd;font-size:.72rem}
+.q-block{background:rgba(255,255,255,.97);border-radius:14px;padding:16px 16px 14px;margin-bottom:12px;box-shadow:0 2px 10px rgba(0,0,0,.15)}
+.q-num{display:inline-block;background:#2e6da4;color:#fff;font-size:.7rem;font-weight:700;border-radius:10px;padding:2px 8px;margin-bottom:8px}
+.q-text{font-size:.92rem;font-weight:600;color:#1a3a5c;line-height:1.5;margin-bottom:12px}
+.likert-row{display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
+.likert-btn{flex:1;min-width:44px;max-width:60px;height:48px;border-radius:10px;border:2px solid #d1d5db;background:#f9fafb;color:#374151;font-size:1rem;font-weight:700;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center}
+.likert-btn:hover{border-color:#2e6da4;background:#eff6ff;color:#1a3a5c}
+.likert-btn.selected{border-color:#1a3a5c;background:#1a3a5c;color:#fff;transform:scale(1.08)}
+.likert-labels{display:flex;justify-content:space-between;margin-top:6px;padding:0 2px}
+.likert-label{font-size:.62rem;color:#9ca3af;max-width:70px;text-align:center;line-height:1.3}
+.q-block.demo .demo-label{font-size:.82rem;color:#6b7280;margin-bottom:8px}
+.demo-options{display:flex;flex-wrap:wrap;gap:7px}
+.demo-btn{padding:7px 14px;border-radius:20px;border:1.5px solid #d1d5db;background:#f9fafb;color:#374151;font-size:.8rem;cursor:pointer;transition:all .15s}
+.demo-btn:hover{border-color:#2e6da4;color:#1a3a5c}
+.demo-btn.selected{border-color:#1a3a5c;background:#1a3a5c;color:#fff}
+.q-block.comment textarea{width:100%;border:1.5px solid #d1d5db;border-radius:8px;padding:10px;font-size:.85rem;font-family:inherit;resize:vertical;min-height:72px;outline:none;box-sizing:border-box}
+.q-block.comment textarea:focus{border-color:#2e6da4}
+.survey-error{background:#fee2e2;color:#991b1b;border-radius:8px;padding:10px 14px;font-size:.8rem;margin-bottom:12px;display:none}
+.btn-survey-submit{width:100%;padding:16px;background:linear-gradient(135deg,#27ae60,#1e8449);color:#fff;font-size:1rem;font-weight:700;border-radius:12px;border:none;cursor:pointer;margin-top:8px;letter-spacing:.5px}
+.btn-survey-submit:disabled{background:#9ca3af;cursor:not-allowed}
+#screen-thanks{background:linear-gradient(160deg,#1a3a5c 0%,#2e6da4 100%);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px 20px;text-align:center}
+.thanks-icon{font-size:3.5rem;margin-bottom:16px}
+.thanks-title{color:#fff;font-size:1.5rem;font-weight:700;margin-bottom:8px}
+.thanks-sub{color:#93c5fd;font-size:.88rem;margin-bottom:28px;line-height:1.6}
+.btn-thanks-home{background:transparent;border:2px solid rgba(255,255,255,.5);color:#fff;border-radius:10px;padding:11px 24px;font-size:.88rem;font-weight:600;cursor:pointer;width:100%;max-width:380px}
+/* ===== CONSENT SCREEN ===== */
+#screen-consent{background:linear-gradient(160deg,#1a3a5c 0%,#2e6da4 100%);min-height:100vh;padding:30px 16px 40px;overflow-y:auto;display:none;flex-direction:column;align-items:center}
+.consent-box{background:rgba(255,255,255,.97);border-radius:16px;padding:24px 20px;max-width:440px;width:100%;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.consent-box h2{font-size:1.1rem;font-weight:700;color:#1a3a5c;margin-bottom:14px;text-align:center}
+.consent-body{font-size:.82rem;color:#374151;line-height:1.8;margin-bottom:20px}
+.consent-body strong{color:#1a3a5c}
+.consent-btns{display:flex;flex-direction:column;gap:10px}
+.btn-consent-yes{padding:14px;background:linear-gradient(135deg,#27ae60,#1e8449);color:#fff;font-size:.95rem;font-weight:700;border-radius:12px;border:none;cursor:pointer;letter-spacing:.5px}
+.btn-consent-no{padding:10px;background:transparent;color:#94a3b8;font-size:.8rem;border:none;cursor:pointer;text-decoration:underline}
 /* Word-level breakdown */
 .breakdown-label{font-size:.72rem;color:#9ca3af;margin-top:8px;text-align:center;letter-spacing:.3px}
 .word-breakdown{display:flex;flex-wrap:wrap;gap:5px;margin-top:5px;justify-content:center}
@@ -509,6 +551,171 @@ button{cursor:pointer;border:none;outline:none;font-family:inherit}
     <button class="btn-retry" id="btn-retry" onclick="retryScenario()">🔄 同じシナリオを再挑戦</button>
     <button class="btn-home" onclick="showSelect()">📋 別の症候を選ぶ</button>
   </div>
+  <div style="margin-top:18px;padding:14px 16px;background:rgba(255,255,255,.12);border-radius:12px;text-align:center">
+    <p style="color:#93c5fd;font-size:.78rem;margin-bottom:10px">📋 引き続き簡単なアンケートにご協力をお願いします（無記名・約1分）</p>
+    <div id="survey-countdown" style="color:#fff;font-size:.85rem;font-weight:600;margin-bottom:8px"></div>
+    <button onclick="showConsent()" style="background:#fff;color:#1a3a5c;border:none;border-radius:10px;padding:10px 28px;font-size:.9rem;font-weight:700;cursor:pointer">アンケートに答える →</button>
+    <button onclick="skipSurvey()" style="background:transparent;border:none;color:#93c5fd;font-size:.75rem;cursor:pointer;display:block;margin:8px auto 0;text-decoration:underline">スキップ</button>
+  </div>
+</div>
+
+<!-- ===================== CONSENT ===================== -->
+<div id="screen-consent" class="screen">
+  <div class="consent-box">
+    <h2>📋 使用感調査へのご参加のお願い</h2>
+    <div class="consent-body">
+      本調査は、救急英語スピーキングトレーナー（EMS English Trainer）の有用性を評価することを目的とした研究です。<br><br>
+      <strong>■ 研究責任者</strong><br>中尾俊一郎（大阪大学大学院医学系研究科 外傷学講座）<br><br>
+      <strong>■ 調査内容</strong><br>アプリの使用感に関する6項目（5段階評価）および属性2項目（所要時間：約1分）<br><br>
+      <strong>■ 個人情報について</strong><br>本調査は無記名です。氏名・所属等の個人を特定できる情報は収集しません。回答データは統計的に処理され、個人が特定される形での公表は行いません。<br><br>
+      <strong>■ 結果の使用</strong><br>得られたデータは学会発表・論文等の学術目的に使用する場合があります。<br><br>
+      <strong>■ 参加の任意性</strong><br>参加は任意であり、回答しないことによる不利益は一切ありません。
+    </div>
+    <div class="consent-btns">
+      <button class="btn-consent-yes" onclick="consentYes()">上記に同意し、アンケートに回答する</button>
+      <button class="btn-consent-no" onclick="consentNo()">同意しない（ホームへ戻る）</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SURVEY ===================== -->
+<div id="screen-survey" class="screen">
+  <div class="survey-header">
+    <h2>📋 使用感アンケート</h2>
+    <p>全6問（5段階評価）＋属性2問 ＋ 自由記述</p>
+  </div>
+  <div class="survey-progress">
+    <div class="survey-progress-bar"><div class="survey-progress-fill" id="survey-prog-fill" style="width:0%"></div></div>
+    <span class="survey-progress-text" id="survey-prog-text">0 / 6 回答済み</span>
+  </div>
+
+  <!-- Q1 -->
+  <div class="q-block" id="qblock-q1">
+    <span class="q-num">Q1</span>
+    <div class="q-text">このアプリは直感的に操作できた</div>
+    <div class="likert-row" id="likert-q1"></div>
+    <div class="likert-labels">
+      <span class="likert-label">全くそう<br>思わない</span>
+      <span class="likert-label">あまり<br>思わない</span>
+      <span class="likert-label">どちらとも<br>いえない</span>
+      <span class="likert-label">ややそう<br>思う</span>
+      <span class="likert-label">非常にそう<br>思う</span>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="q-block" id="qblock-q2">
+    <span class="q-num">Q2</span>
+    <div class="q-text">このアプリは救急英語の学習に役立つと思う</div>
+    <div class="likert-row" id="likert-q2"></div>
+    <div class="likert-labels">
+      <span class="likert-label">全くそう<br>思わない</span>
+      <span class="likert-label">あまり<br>思わない</span>
+      <span class="likert-label">どちらとも<br>いえない</span>
+      <span class="likert-label">ややそう<br>思う</span>
+      <span class="likert-label">非常にそう<br>思う</span>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="q-block" id="qblock-q3">
+    <span class="q-num">Q3</span>
+    <div class="q-text">収録された英語表現は実際の救急現場で通じると思う</div>
+    <div class="likert-row" id="likert-q3"></div>
+    <div class="likert-labels">
+      <span class="likert-label">全くそう<br>思わない</span>
+      <span class="likert-label">あまり<br>思わない</span>
+      <span class="likert-label">どちらとも<br>いえない</span>
+      <span class="likert-label">ややそう<br>思う</span>
+      <span class="likert-label">非常にそう<br>思う</span>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="q-block" id="qblock-q4">
+    <span class="q-num">Q4</span>
+    <div class="q-text">単語別フィードバックにより、発音の課題が明確になった</div>
+    <div class="likert-row" id="likert-q4"></div>
+    <div class="likert-labels">
+      <span class="likert-label">全くそう<br>思わない</span>
+      <span class="likert-label">あまり<br>思わない</span>
+      <span class="likert-label">どちらとも<br>いえない</span>
+      <span class="likert-label">ややそう<br>思う</span>
+      <span class="likert-label">非常にそう<br>思う</span>
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="q-block" id="qblock-q5">
+    <span class="q-num">Q5</span>
+    <div class="q-text">このアプリを今後も継続して使いたい</div>
+    <div class="likert-row" id="likert-q5"></div>
+    <div class="likert-labels">
+      <span class="likert-label">全くそう<br>思わない</span>
+      <span class="likert-label">あまり<br>思わない</span>
+      <span class="likert-label">どちらとも<br>いえない</span>
+      <span class="likert-label">ややそう<br>思う</span>
+      <span class="likert-label">非常にそう<br>思う</span>
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="q-block" id="qblock-q6">
+    <span class="q-num">Q6</span>
+    <div class="q-text">同僚・後輩にこのアプリを推奨したい</div>
+    <div class="likert-row" id="likert-q6"></div>
+    <div class="likert-labels">
+      <span class="likert-label">全くそう<br>思わない</span>
+      <span class="likert-label">あまり<br>思わない</span>
+      <span class="likert-label">どちらとも<br>いえない</span>
+      <span class="likert-label">ややそう<br>思う</span>
+      <span class="likert-label">非常にそう<br>思う</span>
+    </div>
+  </div>
+
+  <!-- D1 職種 -->
+  <div class="q-block demo">
+    <span class="q-num" style="background:#6b7280">属性</span>
+    <div class="q-text">あなたの職種を教えてください</div>
+    <div class="demo-options" id="demo-job">
+      <button class="demo-btn" onclick="selectDemo('job','医師')">医師</button>
+      <button class="demo-btn" onclick="selectDemo('job','救急救命士')">救急救命士</button>
+      <button class="demo-btn" onclick="selectDemo('job','看護師')">看護師</button>
+      <button class="demo-btn" onclick="selectDemo('job','その他医療従事者')">その他医療従事者</button>
+      <button class="demo-btn" onclick="selectDemo('job','その他')">その他</button>
+    </div>
+  </div>
+
+  <!-- D2 英語経験 -->
+  <div class="q-block demo">
+    <span class="q-num" style="background:#6b7280">属性</span>
+    <div class="q-text">英語との関わりに最も近いものを選んでください</div>
+    <div class="demo-options" id="demo-eng">
+      <button class="demo-btn" onclick="selectDemo('eng','英語圏居住経験あり（6ヶ月以上）')">英語圏居住経験あり（6ヶ月以上）</button>
+      <button class="demo-btn" onclick="selectDemo('eng','英語を日常的に使用（業務・学習等）')">英語を日常的に使用（業務・学習等）</button>
+      <button class="demo-btn" onclick="selectDemo('eng','英語学習経験あり（居住・日常使用なし）')">英語学習経験あり（居住・日常使用なし）</button>
+      <button class="demo-btn" onclick="selectDemo('eng','英語との接触はほぼない')">英語との接触はほぼない</button>
+    </div>
+  </div>
+
+  <!-- 自由記述 -->
+  <div class="q-block comment">
+    <span class="q-num" style="background:#6b7280">自由記述</span>
+    <div class="q-text">改善点・ご意見・ご感想（任意）</div>
+    <textarea id="survey-comment" placeholder="ご意見をご自由にお書きください..."></textarea>
+  </div>
+
+  <div class="survey-error" id="survey-error">⚠️ Q1〜Q6 と職種・英語経験をすべてお答えください</div>
+  <button class="btn-survey-submit" onclick="submitSurvey()">回答を送信する ✓</button>
+  <button onclick="skipSurvey()" style="background:transparent;border:none;color:rgba(255,255,255,.5);font-size:.75rem;cursor:pointer;display:block;margin:12px auto 0;text-decoration:underline">スキップしてホームへ戻る</button>
+</div>
+
+<!-- ===================== THANKS ===================== -->
+<div id="screen-thanks" class="screen">
+  <div class="thanks-icon">📋</div>
+  <h2 class="thanks-title">アンケートにご協力お願いします</h2>
+  <p class="thanks-sub">ご協力いただいた方、ありがとうございました。</p>
+  <button class="btn-thanks-home" onclick="showSelect()">📋 別の症候でトレーニングを続ける</button>
 </div>
 
 <script>
@@ -1177,6 +1384,11 @@ let state = {
    SCREEN NAVIGATION
    ===================================================== */
 function showScreen(id) {
+  // Cancel survey countdown if navigating away from complete screen
+  if (id !== 'screen-complete' && id !== 'screen-consent' && id !== 'screen-survey' && state && state.surveyCountdown) {
+    clearInterval(state.surveyCountdown);
+    state.surveyCountdown = null;
+  }
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
 }
@@ -1456,10 +1668,148 @@ function showComplete() {
 
   document.getElementById('btn-retry').onclick = retryScenario;
   showScreen('screen-complete');
+
+  // Auto-countdown to survey (10 seconds)
+  let secs = 10;
+  const cdEl = document.getElementById('survey-countdown');
+  cdEl.textContent = `${secs}秒後に自動的にアンケート画面に移ります`;
+  const cdTimer = setInterval(() => {
+    secs--;
+    if (secs > 0) {
+      cdEl.textContent = `${secs}秒後に自動的にアンケート画面に移ります`;
+    } else {
+      clearInterval(cdTimer);
+      showConsent();
+    }
+  }, 1000);
+  // Store timer so retry/home can cancel it
+  state.surveyCountdown = cdTimer;
 }
 
 function retryScenario() {
+  if (state.surveyCountdown) clearInterval(state.surveyCountdown);
   startTraining();
+}
+
+/* =====================================================
+   SURVEY
+   ===================================================== */
+const SURVEY_QUESTIONS = ['q1','q2','q3','q4','q5','q6'];
+let surveyAnswers = {};  // { q1:3, q2:5, ..., job:'医師', eng:'1〜3年' }
+
+function buildLikertRow(qId) {
+  const row = document.getElementById('likert-' + qId);
+  if (!row) return;
+  row.innerHTML = [1,2,3,4,5].map(v =>
+    `<button class="likert-btn" id="lb-${qId}-${v}" onclick="selectLikert('${qId}',${v})">${v}</button>`
+  ).join('');
+}
+
+function selectLikert(qId, val) {
+  surveyAnswers[qId] = val;
+  [1,2,3,4,5].forEach(v => {
+    const btn = document.getElementById(`lb-${qId}-${v}`);
+    if (btn) btn.classList.toggle('selected', v === val);
+  });
+  // Highlight answered block
+  const block = document.getElementById('qblock-' + qId);
+  if (block) block.style.borderLeft = '4px solid #27ae60';
+  updateSurveyProgress();
+}
+
+function selectDemo(key, val) {
+  surveyAnswers[key] = val;
+  const container = document.getElementById('demo-' + key);
+  if (!container) return;
+  container.querySelectorAll('.demo-btn').forEach(btn => {
+    btn.classList.toggle('selected', btn.textContent === val);
+  });
+}
+
+function updateSurveyProgress() {
+  const answered = SURVEY_QUESTIONS.filter(q => surveyAnswers[q] !== undefined).length;
+  const pct = Math.round((answered / SURVEY_QUESTIONS.length) * 100);
+  document.getElementById('survey-prog-fill').style.width = pct + '%';
+  document.getElementById('survey-prog-text').textContent = `${answered} / ${SURVEY_QUESTIONS.length} 回答済み`;
+}
+
+function showSurvey() {
+  if (state.surveyCountdown) clearInterval(state.surveyCountdown);
+  // Reset answers
+  surveyAnswers = {};
+  // Build Likert buttons
+  SURVEY_QUESTIONS.forEach(q => buildLikertRow(q));
+  // Reset block borders
+  SURVEY_QUESTIONS.forEach(q => {
+    const b = document.getElementById('qblock-' + q);
+    if (b) b.style.borderLeft = '';
+  });
+  // Reset demo buttons
+  ['demo-job','demo-eng'].forEach(id => {
+    const c = document.getElementById(id);
+    if (c) c.querySelectorAll('.demo-btn').forEach(b => b.classList.remove('selected'));
+  });
+  document.getElementById('survey-comment').value = '';
+  document.getElementById('survey-error').style.display = 'none';
+  updateSurveyProgress();
+  showScreen('screen-survey');
+}
+
+function showConsent() {
+  if (state.surveyCountdown) clearInterval(state.surveyCountdown);
+  showScreen('screen-consent');
+}
+
+function consentYes() {
+  showSurvey();
+}
+
+function consentNo() {
+  showSelect();
+}
+
+function skipSurvey() {
+  if (state.surveyCountdown) clearInterval(state.surveyCountdown);
+  showSelect();
+}
+
+function submitSurvey() {
+  // Validate: Q1-Q6 and both demographics required
+  const missing = SURVEY_QUESTIONS.filter(q => surveyAnswers[q] === undefined);
+  const errEl = document.getElementById('survey-error');
+  if (missing.length > 0 || !surveyAnswers.job || !surveyAnswers.eng) {
+    errEl.style.display = 'block';
+    missing.forEach(q => {
+      const b = document.getElementById('qblock-' + q);
+      if (b) b.style.borderLeft = '4px solid #ef4444';
+    });
+    errEl.scrollIntoView({ behavior:'smooth', block:'nearest' });
+    return;
+  }
+  errEl.style.display = 'none';
+
+  // Submit to Google Forms
+  const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSfiJ4vXZu85g_4bWRSjhsElWzesXaiAaWqKlWZaKGwiTXhMAg/formResponse';
+  const formData = new URLSearchParams();
+  formData.append('entry.45870977',   '同意する');
+  formData.append('entry.2131035755', String(surveyAnswers.q1));
+  formData.append('entry.675079287',  String(surveyAnswers.q2));
+  formData.append('entry.941660820',  String(surveyAnswers.q3));
+  formData.append('entry.515102181',  String(surveyAnswers.q4));
+  formData.append('entry.1353905634', String(surveyAnswers.q5));
+  formData.append('entry.781654103',  String(surveyAnswers.q6));
+  formData.append('entry.1099293663', surveyAnswers.job);
+  formData.append('entry.392419657',  surveyAnswers.eng);
+  formData.append('entry.226724294',  document.getElementById('survey-comment').value.trim());
+
+  fetch(FORM_URL, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: formData.toString()
+  }).catch(() => {});
+
+  showScreen('screen-thanks');
 }
 
 /* =====================================================
